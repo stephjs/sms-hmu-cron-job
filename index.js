@@ -37,8 +37,8 @@ const sendMessageToNumbers = (phoneNumbers, message) => {
   });
 };
 
-// Every Monday at 07:30 am send a funny message to the list of numbers
-const cronJobFrequency = '30 7 * * 1';
+// Every Monday at 9am send a funny message to the list of numbers
+const cronJobFrequency = '* 17 * * 1';
 cron.schedule(cronJobFrequency, function () {
   sendMessageToNumbers(numbers, message);
 });
